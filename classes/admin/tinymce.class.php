@@ -11,6 +11,7 @@ class Tinymce {
 	protected $JM_LTSC_Tinymce;
 	protected static $instance;
 
+	private function __construct(){}
 
 	public static function _get_instance() {
 

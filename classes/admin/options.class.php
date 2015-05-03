@@ -11,6 +11,9 @@ class Options {
 	protected static $instance;
 
 
+	private function __construct(){}
+
+
 	public static function _get_instance() {
 
 		if ( ! isset( self::$instance ) ) {

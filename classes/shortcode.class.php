@@ -9,7 +9,6 @@ class WP_Twitter_Shortcode {
 	protected $JM_LTSC_Shortcode;
 	protected static $instance;
 
-
 	public static function _get_instance() {
 
 		if ( ! isset( self::$instance ) ) {
@@ -24,7 +23,6 @@ class WP_Twitter_Shortcode {
 		add_shortcode( 'jmlt', array( __CLASS__, 'output' ) );
 
 	}
-
 
 	public static function output( $atts ) {
 
@@ -54,7 +52,7 @@ class WP_Twitter_Shortcode {
 			'screen_name'     => $args['username'],
 		);
 
-		$init = new \WP_Twitter_Oauth( $consumer_key, $consumer_secret, $args['request'], $params, $args['cache'], $args['display_media'] );
+		$init = new \TokenToMe\WP_Twitter_Oauth( $consumer_key, $consumer_secret, $args['request'], $params, $args['cache'], $args['display_media'] );
 
 		//output
 		$output = $init->display_infos();

@@ -10,6 +10,7 @@ class Init {
 	protected $JM_LTSC_Init;
 	protected static $instance;
 
+	private function __construct(){}
 
 	public static function _get_instance() {
 
@@ -31,7 +32,7 @@ class Init {
 	}
 
 	public static function settings_action_links( $links, $file ) {
-		$settings_link = '<a href="' . admin_url( 'admin.php?page=jm_ltsc_options' ) . '">' . __( "Settings" ) . '</a>';
+		$settings_link = '<a href="' . esc_url( admin_url( 'admin.php?page=jm_ltsc_options' ) ) . '">' . __( "Settings" ) . '</a>';
 		array_unshift( $links, $settings_link );
 
 		return $links;
@@ -40,7 +41,7 @@ class Init {
 	public static function on_activation() {
 		$opts = get_option( 'jm_ltsc' );
 		if ( ! is_array( $opts ) ) {
-			update_option( 'jm_ltsc', JM_LTSC_Init::get_default_options() );
+			update_option( 'jm_ltsc', Options::get_default_options() );
 		}
 	}
 
