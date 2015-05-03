@@ -12,26 +12,31 @@ defined( 'ABSPATH' ) or die( 'No !' );
 
 define( 'JM_LTSC_VERSION', '5.0' );
 define( 'JM_LTSC_DIR', plugin_dir_path( __FILE__ ) );
-define( 'JM_LTSC_CLASS_DIR', plugin_dir_path( __FILE__ ) . 'classes/' );
-define( 'JM_LTSC_LIB_DIR', JM_LTSC_DIR . 'admin/libs/' );
+define( 'JM_LTSC_URL', plugin_dir_url( __FILE__ ) );
 
-define( 'JM_LTSC_CSS_URL', plugin_dir_url( __FILE__ ) . 'assets/css/' );
-define( 'JM_LTSC_JS_URL', plugin_dir_url( __FILE__ ) . 'assets/js/' );
-define( 'JM_LTSC_IMG_URL', plugin_dir_url( __FILE__ ) . 'assets/img/' );
+define( 'JM_LTSC_CSS_URL', JM_LTSC_URL . 'assets/css/' );
+define( 'JM_LTSC_JS_URL', JM_LTSC_URL. 'assets/js/' );
+define( 'JM_LTSC_IMG_URL', JM_LTSC_URL . 'assets/img/' );
 
 
 define( 'JM_LTSC_LANG_DIR', dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 define( 'JM_LTSC_SLUG_NAME', 'jm-ltsc' );
 
-// Call modules
-if ( is_admin() ) {
-	require( JM_LTSC_CLASS_DIR . 'admin/options.class.php' );
-	require( JM_LTSC_CLASS_DIR . 'admin/init.class.php' );
-	require( JM_LTSC_CLASS_DIR . 'admin/tinymce.class.php' );
+// Function for easy load files
+function _jm_ltsc_load_files( $dir, $files, $suffix = '' ) {
+	foreach ( $files as $file ) {
+		if ( is_file( $dir . $file . '.' . $suffix . '.php' ) ) {
+			require_once( $dir . $file . '.' . $suffix . '.php' );
+		}
+	}
 }
 
-require( JM_LTSC_CLASS_DIR . 'authorize.class.php' );
-require( JM_LTSC_CLASS_DIR . 'shortcode.class.php' );
+// Call modules
+if ( is_admin() ) {
+	_jm_ltsc_load_files( JM_LTSC_DIR . 'classes/admin/', array( 'options', 'init', 'tinymce' ), 'class' );
+}
+
+_jm_ltsc_load_files( JM_LTSC_DIR . 'classes/', array( 'shortcode', 'authorize' ), 'class' );
 
 add_action( 'plugins_loaded', '_jm_ltsc_early_init' );
 function _jm_ltsc_early_init() {
