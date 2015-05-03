@@ -1,0 +1,238 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in function
+msgid " ago"
+msgstr ""
+
+#. Text in echo
+msgid "About the developer"
+msgstr ""
+
+#. Text in echo
+msgid "Basic use, no option => whether it is in a post or in a Text widget use: <code>[jmlt]</code>"
+msgstr ""
+
+#. Text in function
+msgid "Class tmhOAuth is already running in your website, this could break the plugin JMLTSC !"
+msgstr ""
+
+#. Text in echo
+msgid "Different username => whether it is in a post or in a Text widget use: <code>[jmlt username=\"rihanna\"]</code>"
+msgstr ""
+
+#. Text in echo
+msgid "Exclude RTs => whether it is in a post or in a Text widget use: <code>[jmlt include_rts=\"false\"]</code>"
+msgstr ""
+
+#. Text in echo
+msgid "Exclude replies => whether it is in a post or in a Text widget use: <code>[jmlt exclude_replies=\"true\"]</code>"
+msgstr ""
+
+#. Text in function
+msgid "Favorite"
+msgstr ""
+
+#. Text in echo
+msgid "Fix poor native markup for WordPress gallery with some HTML5 markup and add responsive rules."
+msgstr ""
+
+#. Text in echo
+msgid "Get your last tweets <br />the Twitter 1.1 way</br> with a simple shortcode"
+msgstr ""
+
+#. Text in echo
+msgid "Help me keep this free"
+msgstr ""
+
+#. Text in echo
+msgid "How to"
+msgstr ""
+
+#. Text in echo
+msgid "I am a WordPress Developer, I like to make it simple."
+msgstr ""
+
+#. Text in echo
+msgid "JM Last Twit Shortcode"
+msgstr ""
+
+#. Text in function
+msgid "JM Last Twit Shortcode - cache"
+msgstr ""
+
+#. Text in echo
+msgid "Make your comments tweetable"
+msgstr ""
+
+#. Text in echo
+msgid "More than 1 tweet, e.g 5 => whether it is in a post or in a Text widget use: <code>[jmlt count=\"5\"]</code>"
+msgstr ""
+
+#. Text in echo
+msgid "My WordPress Profile"
+msgstr ""
+
+#. Text in echo
+msgid "Options"
+msgstr ""
+
+#. Text in echo
+msgid "Other plugins you might dig"
+msgstr ""
+
+#. Text in echo
+msgid "Plugin displays tweets in an unordered list you can style in your own stylesheet with CSS classes <code>tweet-name {}</code>, <code>.tweet-screen-name {}</code>, <code>.tweet-twittar {}</code>, <code>.tweet-timestamp{}</code>, <code>.time-date{}</code>, <code>.tweet-timediff{}</code>, <code>.intent-meta{}</code>, <code>.tweet-reply{}</code>, <code>.tweet-retweet{}</code>, <code>.tweet-favorite{}</code>. <br />To apply styles to the text of you tweets just us CSS class <code>.tweet-content{}</code>"
+msgstr ""
+
+#. Text in echo
+msgid "Provide your Twitter username (used by default and without @)"
+msgstr ""
+
+#. Text in echo
+msgid "Provide your application consumer key"
+msgstr ""
+
+#. Text in echo
+msgid "Provide your application consumer secret"
+msgstr ""
+
+#. Text in echo
+msgid "Provide your oAuth Token"
+msgstr ""
+
+#. Text in echo
+msgid "Provide your oAuth Token Secret"
+msgstr ""
+
+#. Text in function
+msgid "Rate limits are exceed!"
+msgstr ""
+
+#. Text in echo
+msgid "Rate the plugin on WordPress.org"
+msgstr ""
+
+#. Text in function
+msgid "Reply"
+msgstr ""
+
+#. Text in function
+msgid "Retweet"
+msgstr ""
+
+#. Text in echo
+msgid "Set cache duration => whether it is in a post or in a Text widget use: <code>[jmlt cache=\"3600\"]</code> to put tweets in cache for 1 hour"
+msgstr ""
+
+#. Text in function
+msgid "Something is wrong or missing. "
+msgstr ""
+
+#. Text in echo
+msgid "Styles"
+msgstr ""
+
+#. Text in echo
+msgid "To grab your feed you need to authenticate in the new version of Twitter API 1.1"
+msgstr ""
+
+#. Text in echo
+msgid "To reuse tokens you set to use the plugin => just write in your templates and codes :<code>global $tcTmhOAuth;</code>"
+msgstr ""
+
+#. Text in echo
+msgid "Tweet it"
+msgstr ""
+
+#. Text in function
+msgid "Twitter is overwhelmed or something bad happened with its API."
+msgstr ""
+
+#. Text in echo
+msgid "Useful links"
+msgstr ""
+
+#. Text in echo
+msgid "With this plugin you can display any Twitter timeline with a simple a shortcode"
+msgstr ""
+
+#. Text in function
+msgid "Your credentials might be unset or incorrect or username is wrong. In any case this error is not due to Twitter API."
+msgstr ""
+
+#. Text in echo
+msgid "follow me on Twitter"
+msgstr ""
+
+#. Text in echo
+msgid "https://twitter.com/intent/tweet?source=webclient&amp;hastags=WordPress,Plugin&amp;text=JM%20Last%20Twit%20%20Shortcode%20a%20great%20WordPress%20plugin%20to%20get%20your%20last%20tweet%20Try%20it!&amp;url=http://wordpress.org/extend/plugins/jm-last-twit-shortcode/&amp;related=TweetPressFr&amp;via=TweetPressFr"
+msgstr ""
+
+#. Text in function
+msgid "on Twitter"
+msgstr ""
+
+#. Text in echo
+msgid "Do you want to add Quicktags (buttons in HTML editor) in post edit?"
+msgstr ""
+
+#. Text in echo
+msgid "Default is yes"
+msgstr ""
+
+#. Text in echo
+msgid "Yes"
+msgstr ""
+
+#. Text in echo
+msgid "No"
+msgstr ""
+
+
+#. Text in echo
+msgid "Delete cache"
+msgstr ""
+
+#. Text in echo
+msgid "Delete cache now!"
+msgstr ""
+
+#. Text in echo
+msgid "Cache has been deleted."
+msgstr ""
+
+
+#. Text in echo
+msgid "Twitter account (without @)"
+msgstr ""
+
+#. Text in echo
+msgid "Insert Twitter Shortcode"
+msgstr ""
+
+#. Text in echo
+msgid "How many Tweets?"
+msgstr ""
+
+#. Text in echo
+msgid "Cache duration (hours)"
+msgstr ""
+
+#. Text in echo
+msgid "Include RTs?"
+msgstr ""
+
+#. Text in echo
+msgid "Exclude replies?"
+msgstr ""
+
+#. Text in echo
+msgid "Size of Twittar?"
+msgstr ""
+
+#. Text in echo
+msgid "Display attached pic?"
+msgstr ""
