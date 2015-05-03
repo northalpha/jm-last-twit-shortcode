@@ -8,16 +8,16 @@ or die( 'No !' );
 		echo '<div class="updated">' . wpautop( __( 'Settings saved.' ) ) . '</div>';
 	} ?>
 	<ul id="tabs">
-		<li><a id="tab1"><?php _e( 'Options', JM_LTSC_SLUG_NAME ); ?></a></li>
-		<li><a id="tab2"><?php _e( 'Styles', JM_LTSC_SLUG_NAME ); ?></a></li>
-		<li><a id="tab3"><?php _e( 'About' ); ?></a></li>
+		<li><a id="tab1"><?php esc_html_e( 'Options', JM_LTSC_SLUG_NAME ); ?></a></li>
+		<li><a id="tab2"><?php esc_html_e( 'Styles', JM_LTSC_SLUG_NAME ); ?></a></li>
+		<li><a id="tab3"><?php esc_html_e( 'About' ); ?></a></li>
 
 	</ul>
 	<div class="container" id="tab1C">
 
-		<blockquote><?php _e( 'Get your last tweets <br />the Twitter 1.1 way</br> with a simple shortcode', JM_LTSC_SLUG_NAME ); ?>
-			<br/><?php _e( 'To grab your feed you need to authenticate in the new version of Twitter API 1.1', JM_LTSC_SLUG_NAME ); ?>
-			<br/><?php _e( 'With this plugin you can display any Twitter timeline with a simple a shortcode', JM_LTSC_SLUG_NAME ); ?>
+		<blockquote><?php esc_html_e( 'Get your last tweets <br />the Twitter 1.1 way</br> with a simple shortcode', JM_LTSC_SLUG_NAME ); ?>
+			<br/><?php esc_html_e( 'To grab your feed you need to authenticate in the new version of Twitter API 1.1', JM_LTSC_SLUG_NAME ); ?>
+			<br/><?php esc_html_e( 'With this plugin you can display any Twitter timeline with a simple a shortcode', JM_LTSC_SLUG_NAME ); ?>
 		</blockquote>
 
 		<?php echo do_shortcode( '[jmlt]' ); ?>
@@ -26,29 +26,26 @@ or die( 'No !' );
 			<?php settings_fields( JM_LTSC_SLUG_NAME ); ?>
 
 			<fieldset>
-				<legend><?php _e( 'Options', JM_LTSC_SLUG_NAME ); ?></legend>
+				<legend><?php esc_html_e( 'Options', JM_LTSC_SLUG_NAME ); ?></legend>
 				<p>
-					<label for="twitAccount"><?php _e( 'Provide your Twitter username (used by default and without @)', JM_LTSC_SLUG_NAME ); ?>:</label>
-					<input id="twitAccount" type="text" name="jm_ltsc[twitAccount]" size="50"
-					       value="<?php echo self::remove_at( $opts['twitAccount'] ); ?>"/>
+					<label for="twitAccount"><?php esc_html_e( 'Provide your Twitter username (used by default and without @)', JM_LTSC_SLUG_NAME ); ?>:</label>
+					<input id="twitAccount" type="text" name="jm_ltsc[twitAccount]" size="50" value="<?php echo esc_attr( self::remove_at( $opts['twitAccount'] ) ); ?>"/>
 				</p>
 				<p>
-					<label for="consumerKey"><?php _e( 'Provide your application consumer key', JM_LTSC_SLUG_NAME ); ?>:</label>
-					<input id="consumerKey" type="text" name="jm_ltsc[consumerKey]" size="50"
-					       value="<?php echo $opts['consumerKey']; ?>"/>
+					<label for="consumerKey"><?php esc_html_e( 'Provide your application consumer key', JM_LTSC_SLUG_NAME ); ?>:</label>
+					<input id="consumerKey" type="text" name="jm_ltsc[consumerKey]" size="50" value="<?php echo esc_attr( $opts['consumerKey'] ); ?>"/>
 				</p>
 				<p>
-					<label for="consumerSecret"><?php _e( 'Provide your application consumer secret', JM_LTSC_SLUG_NAME ); ?>:</label>
-					<input id="consumerSecret" type="text" name="jm_ltsc[consumerSecret]" size="50"
-					       value="<?php echo $opts['consumerSecret']; ?>"/>
+					<label for="consumerSecret"><?php esc_html_e( 'Provide your application consumer secret', JM_LTSC_SLUG_NAME ); ?>:</label>
+					<input id="consumerSecret" type="text" name="jm_ltsc[consumerSecret]" size="50" value="<?php echo esc_attr( $opts['consumerSecret'] ); ?>"/>
 				</p>
 				<p>
-					<label for="twitQuickTags"><?php _e( 'Do you want to add Quicktags (buttons in HTML editor) in post edit?', JM_LTSC_SLUG_NAME ); ?>:</label>
+					<label for="twitQuickTags"><?php esc_html_e( 'Do you want to add Quicktags (buttons in HTML editor) in post edit?', JM_LTSC_SLUG_NAME ); ?>:</label>
 					<select class="styled-select" id="twitQuickTags" name="jm_ltsc[twitQuickTags]">
-						<option value="yes" <?php echo $opts['twitQuickTags'] == 'yes' ? 'selected="selected"' : ''; ?> ><?php _e( 'Yes', JM_LTSC_SLUG_NAME ); ?></option>
-						<option value="no" <?php echo $opts['twitQuickTags'] == 'no' ? 'selected="selected"' : ''; ?> ><?php _e( 'No', JM_LTSC_SLUG_NAME ); ?></option>
+						<option value="yes" <?php selected( 'yes', $opts['twitQuickTags'] ); ?>><?php esc_html_e( 'Yes', JM_LTSC_SLUG_NAME ); ?></option>
+						<option value="no" <?php selected( 'no', $opts['twitQuickTags'] ); ?> ><?php esc_html_e( 'No', JM_LTSC_SLUG_NAME ); ?></option>
 					</select>
-					<br/><em>(<?php _e( 'Default is yes', JM_LTSC_SLUG_NAME ); ?>)</em>
+					<br/><em>(<?php esc_html_e( 'Default is yes', JM_LTSC_SLUG_NAME ); ?>)</em>
 				</p>
 				<?php submit_button( null, 'primary', '_submit' ); ?>
 			</fieldset>
