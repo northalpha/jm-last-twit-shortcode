@@ -231,7 +231,7 @@ class WP_Twitter_Oauth {
 			switch ( $request ) {
 
 				case 'users/show':
-					$display = '<img src="' . $data->profile_image_url . '" width="36" height="36" alt="@.' . $data->screen_name . '" />';
+					$display = '<img src="' . $data->profile_image_url_https . '" width="36" height="36" alt="@.' . $data->screen_name . '" />';
 					$display .= '<ul class="ttm-container">';
 					$display .= '<li><span class="ttm-users-show label">' . __( 'name', 'ttm' ) . '</span>' . ' ' . '<span class="ttm-users-show user-name"><a href="https://twitter.com/' . $data->screen_name . '">' . $data->name . '</a></span></li>';
 					$display .= '<li><span class="ttm-users-show label">' . __( 'screen name', 'ttm' ) . '</span>' . ' ' . '<span class="ttm-users-show screen-name"><a href="https://twitter.com/' . $data->screen_name . '">' . $data->screen_name . '</a></span></li>';
@@ -250,7 +250,7 @@ class WP_Twitter_Oauth {
 
 					while ( $i <= $count ) {
 						$display .= '<li class="ttm-users-lookup">';
-						$display .= '<img src="' . $data[ $i - 1 ]->profile_image_url . '" width="36" height="36" alt="@' . $data[ $i - 1 ]->screen_name . '" />';
+						$display .= '<img src="' . $data[ $i - 1 ]->profile_image_url_https . '" width="36" height="36" alt="@' . $data[ $i - 1 ]->screen_name . '" />';
 						$display .= '<ul>';
 						$display .= '<li><span class="ttm-users-lookup label">' . __( 'name', 'ttm' ) . '</span>' . ' ' . '<span class="ttm-users-show user-name"><a href="https://twitter.com/' . $data[ $i - 1 ]->screen_name . '">' . $data[ $i - 1 ]->name . '</a></span></li>';
 						$display .= '<li><span class="ttm-users-lookup label">' . __( 'screen name', 'ttm' ) . '</span>' . ' ' . '<span class="ttm-users-show screen-name"><a href="https://twitter.com/' . $data[ $i - 1 ]->screen_name . '">' . $data[ $i - 1 ]->screen_name . '</a></span></li>';
@@ -289,7 +289,7 @@ class WP_Twitter_Oauth {
 							$name              = $data[ $i - 1 ]->user->name;
 							$date              = $data[ $i - 1 ]->created_at;
 							$date_format       = 'j/m/y - ' . get_option( 'time_format' );
-							$profile_image_url = $data[ $i - 1 ]->user->profile_image_url;
+							$profile_image_url_https = $data[ $i - 1 ]->user->profile_image_url_https;
 							$pic_twitter       = '';
 
 							if ( $this->display_media && property_exists( $data[ $i - 1 ]->entities, 'media' ) ) {
@@ -299,7 +299,7 @@ class WP_Twitter_Oauth {
 							}
 
 							$display .= '<li class="' . $class . ' tweets">';
-							$display .= '<img class="' . $class . ' twittar" width="48" height="48" src="' . $profile_image_url . '" alt="@' . $screen_name . '"/>';
+							$display .= '<img class="' . $class . ' twittar" width="48" height="48" src="' . $profile_image_url_https . '" alt="@' . $screen_name . '"/>';
 							$display .= '<strong class="' . $class . ' name"><a href="https://twitter.com/' . $screen_name . '">' . $name . '</span></a></strong>' . "\t";
 							$display .= '<strong class="' . $class . ' screen-name"><a href="https://twitter.com/' . $screen_name . '">' . $screen_name . '</a></strong>' . "\t";
 							$display .= '<span class="' . $class . ' date"><a href="https://twitter.com/' . $screen_name . '/statuses/' . $id_str . '">' . date( $date_format, strtotime( $date ) ) . '</a>' . "\n";
